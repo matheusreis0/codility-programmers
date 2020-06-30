@@ -1,19 +1,8 @@
 def solution(A):
     result = 0
-    a = 0
-    b = 0
 
-    A.sort()
-    
-    for index, value in enumerate(A):
-        if index == 0:
-            a = value
-            b = A[index+1]
-        elif index == 1:
-            a = value
-            b = 
-        else:
-            
+    for item in A:
+        result ^= item
 
     return result
 
@@ -54,5 +43,7 @@ def solution(A):
     return item_unpaired
 """
 
-array = [9, 3, 9, 3, 9, 7] + [9] * 3 + [3] * 4
+# array = [9, 3, 9, 3, 9, 7] + [9] * 3 + [3] * 4
+# array = [3, 3, 3, 3, 9, 9, 7]
+array = [9, 9, 7, 7] * 123 + [3]
 print(solution(array))
