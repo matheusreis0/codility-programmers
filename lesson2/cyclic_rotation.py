@@ -1,7 +1,14 @@
-array = []
-times = 15
-
 def solution(A, K):
+    if len(A) > 0:
+        for i in range(K):
+            last_index = len(A) - 1
+            last_item = A[last_index]
+            A.pop(last_index)
+            A.insert(0, last_item)
+
+    return A
+
+"""
     last_index = len(A) - 1
     new_array = [0] * len(A)
 
@@ -17,5 +24,12 @@ def solution(A, K):
         new_array = A
 
     return new_array
+"""
+
+array = []
+times = 1
 
 print(solution(array, times))
+
+print(array)
+
