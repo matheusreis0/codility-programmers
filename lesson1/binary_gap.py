@@ -1,22 +1,29 @@
 def solution(N):
-    num = bin(n)
+    binary_str = bin(N)[2:]
+    binary_gaps = binary_str.strip('0').strip('1').split('1')
+    max_binary_gap = len(max(binary_gaps))
 
-    binary_gap = 0
-    previous_gap = 0
-
-    for i in range(2, len(num)):
-        if num[i] == '0':
-                binary_gap += 1
-        else:
-            if binary_gap > previous_gap:
-                previous_gap = binary_gap
-            binary_gap = 0
-    
-    return previous_gap
+    return max_binary_gap
 
 n = 1041
 
 """
+num = bin(n)
+
+binary_gap = 0
+previous_gap = 0
+
+for i in range(2, len(num)):
+    if num[i] == '0':
+            binary_gap += 1
+    else:
+        if binary_gap > previous_gap:
+            previous_gap = binary_gap
+        binary_gap = 0
+
+return previous_gap
+
+
 binary_number_list = []
     binary_gap = 0
     previous_gap = 0
