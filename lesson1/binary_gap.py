@@ -1,5 +1,23 @@
 def solution(N):
-    binary_number_list = []
+    num = bin(n)
+
+    binary_gap = 0
+    previous_gap = 0
+
+    for i in range(2, len(num)):
+        if num[i] == '0':
+                binary_gap += 1
+        else:
+            if binary_gap > previous_gap:
+                previous_gap = binary_gap
+            binary_gap = 0
+    
+    return previous_gap
+
+n = 1041
+
+"""
+binary_number_list = []
     binary_gap = 0
     previous_gap = 0
 
@@ -17,7 +35,6 @@ def solution(N):
             binary_gap = 0
 
     return previous_gap
-    pass
+"""
 
-n = 1041
 print(solution(n))
