@@ -1,14 +1,13 @@
 def solution(A):
-    array.sort()
-    size = len(array)
-    
+    A.sort()
+    size = len(A)
+
     for i in range(size):
         value = i + 1
-        if value != array[i]:
+        if value != A[i]:
             return value
-    else:
-        return size + 1
-    return size
+
+    return size + 1
 
 """
 def solution(A):
