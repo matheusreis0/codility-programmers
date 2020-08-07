@@ -29,6 +29,6 @@ def solution(A):
 
     return best
 
-# A = [3, 1, 2, 4, 3]
-A = [-1000, 1000]
+A = [3, 1, 2, 4, 3]
+# A = [-1000, 1000]
 print(solution(A))
